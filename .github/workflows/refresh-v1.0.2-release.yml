@@ -1,0 +1,79 @@
+name: Refresh v1.0.2 release attachment
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/refresh-v1.0.2-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build and verify the two-preset ZIP
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, zipfile
+
+          files = {
+              "伊薇娅·织语_1.0.2.json": ("presets/伊薇娅·织语_1.0.2.json", "31b166e1f71cb450af0760599c51a0370d8e9086"),
+              "伊芙琳·织境_1.0.2.json": ("presets/伊芙琳·织境_1.0.2.json", "7adb681354750adb35ac8abeb27b07d7e73818fb"),
+          }
+          def git_blob_sha(data):
+              return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest()
+
+          with zipfile.ZipFile("1.0.2-updated.zip", "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+              for name, (source, expected) in files.items():
+                  data = Path(source).read_bytes()
+                  json.loads(data)
+                  assert git_blob_sha(data) == expected, f"Source differs from verified test: {name}"
+                  info = zipfile.ZipInfo(name, (2026, 10, 25, 0, 0, 0))
+                  info.compress_type = zipfile.ZIP_DEFLATED
+                  info.external_attr = 0o100644 << 16
+                  archive.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+          with zipfile.ZipFile("1.0.2-updated.zip") as archive:
+              assert archive.testzip() is None
+              assert set(archive.namelist()) == set(files)
+              for name, (_, expected) in files.items():
+                  assert git_blob_sha(archive.read(name)) == expected
+          print("Verified 1.0.2-updated.zip with exactly two presets")
+          PY
+
+      - name: Safely replace v1.0.2 release attachment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          gh release upload v1.0.2 1.0.2-updated.zip --repo "$GITHUB_REPOSITORY"
+          mkdir -p /tmp/release-check
+          gh release download v1.0.2 --pattern "1.0.2-updated.zip" --dir /tmp/release-check --repo "$GITHUB_REPOSITORY"
+          cmp 1.0.2-updated.zip /tmp/release-check/1.0.2-updated.zip
+
+          old_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/v1.0.2" --jq '.assets[] | select(.name == "1.0.2.zip") | .id')
+          new_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/v1.0.2" --jq '.assets[] | select(.name == "1.0.2-updated.zip") | .id')
+          test -n "$old_id"
+          test -n "$new_id"
+          test "$old_id" != "$new_id"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$old_id"
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/releases/assets/$new_id" -f name="1.0.2.zip" > /tmp/renamed.json
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/v1.0.2" --jq '.assets[].name' | grep -Fx '1.0.2.zip'
+          echo "Successfully replaced the v1.0.2 ZIP asset."
+
+      - name: Align existing v1.0.2 tag to updated source
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/v1.0.2" -f sha="792c465202aa7dcbf078aeda6c3c9851d0116561" -F force=true > /tmp/tag.json
+          test "$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/v1.0.2" --jq '.object.sha')" = "792c465202aa7dcbf078aeda6c3c9851d0116561"
+          echo "Updated v1.0.2 tag to the source commit containing the revision."

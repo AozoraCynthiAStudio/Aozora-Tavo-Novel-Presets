@@ -8,11 +8,15 @@
 
 Two narrative presets for interactive fiction and roleplay. They share a novel-style writing foundation, while taking different approaches to prompt structure and narrative identity.
 
-[![Version](https://img.shields.io/badge/version-1.0.2-5277C3?style=flat-square)](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases)
+[![Version](https://img.shields.io/badge/version-1.0.2-5277C3?style=flat-square)](#下载中文预设--download-json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square)](LICENSE)
 [![Language](https://img.shields.io/badge/language-中文%20%2F%20English-8A63D2?style=flat-square)](#language)
 
-**[前往 Releases 获取正式版本 · Get the published release](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases)**
+### 下载中文预设 · Download JSON
+
+**[下载 伊薇娅·织语 1.0.2](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/raw/refs/heads/main/presets/%E4%BC%8A%E8%96%87%E5%A8%85%C2%B7%E7%BB%87%E8%AF%AD_1.0.2.json?download=1)　｜　[下载 伊芙琳·织境 1.0.2](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/raw/refs/heads/main/presets/%E4%BC%8A%E8%8A%99%E7%90%B3%C2%B7%E7%BB%87%E5%A2%83_1.0.2.json?download=1)**
+
+<sub>若浏览器直接展示 JSON，可打开文件页面，点击 Download raw file 保存。</sub>
 
 </div>
 
@@ -168,21 +172,21 @@ NPC 可以在符合性格和情境时主动回应，场景也可以自然延续�
 
 ## 安装、下载与修改
 
-### 获取正式版本
+### 下载中文预设 · Download JSON
 
-**请从 GitHub Releases 页面获取正式发布版本：**
+两份配置都采用**中文文件名**，可以直接在本仓库下载，不需要进入 Releases 页面。
 
-**[前往 Releases 下载 · Download from Releases](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases)**
+| 预设 | 下载 JSON | 文件页面 |
+|---|---|---|
+| **伊薇娅·织语 1.0.2** | **[直接下载](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/raw/refs/heads/main/presets/%E4%BC%8A%E8%96%87%E5%A8%85%C2%B7%E7%BB%87%E8%AF%AD_1.0.2.json?download=1)** | [查看文件](presets/伊薇娅·织语_1.0.2.json) |
+| **伊芙琳·织境 1.0.2** | **[直接下载](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/raw/refs/heads/main/presets/%E4%BC%8A%E8%8A%99%E7%90%B3%C2%B7%E7%BB%87%E5%A2%83_1.0.2.json?download=1)** | [查看文件](presets/伊芙琳·织境_1.0.2.json) |
 
-发布版本与源文件分开管理，建议普通玩家优先下载 Release 中标记的正式版本；想研究规则、查看差异或自行修改的玩家，可以直接浏览仓库中的源配置：
-
-- [查看伊薇娅源配置](presets/Aozora-Tavo-Iveya-Zhiyu-v1.0.2.json)
-- [查看伊芙琳源配置](presets/Aozora-Tavo-Eveline-Zhijing-v1.0.2.json)
+在部分手机浏览器中，直接下载链接可能显示 JSON 文本。遇到这种情况，打开「查看文件」并使用 GitHub 页面右上角的 **Download raw file** 下载即可。下载后的文件名就是中文名称。
 
 ### 安装建议
 
 1. 先备份自己当前使用的 Tavo 预设。
-2. 从 Releases 选择想体验的预设版本并下载。
+2. 从上面的中文文件链接下载想体验的 JSON 预设。
 3. 在 Tavo 中导入 JSON 文件。
 4. 导入后检查提示词槽位、启用状态与顺序是否符合预期。
 5. 用熟悉的人物卡、世界书和模型体验几轮，再决定是否调整。
@@ -313,8 +317,8 @@ If you prefer a simpler, more general structure without a separate narrative per
 - **Choose Iveya** if you prefer a relatively compact, neutral structure without a separate narrative persona.
 - **Choose Eveline** if you prefer a layered structure with a distinct backstage narrative identity and more explicit guidance for continuity, world agency, scene texture, and adult intimacy.
 - Back up your current Tavo preset before importing.
-- Download the published version from the [GitHub Releases page](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases), then import the JSON file into Tavo and check prompt slots, enabled states, and ordering.
-- For source inspection or customization, browse [Iveya's JSON](presets/Aozora-Tavo-Iveya-Zhiyu-v1.0.2.json) or [Eveline's JSON](presets/Aozora-Tavo-Eveline-Zhijing-v1.0.2.json).
+- Download either Chinese-named preset directly: [Iveya Zhiyu JSON](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/raw/refs/heads/main/presets/%E4%BC%8A%E8%96%87%E5%A8%85%C2%B7%E7%BB%87%E8%AF%AD_1.0.2.json?download=1) or [Eveline Zhijing JSON](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/raw/refs/heads/main/presets/%E4%BC%8A%E8%8A%99%E7%90%B3%C2%B7%E7%BB%87%E5%A2%83_1.0.2.json?download=1). Import the file into Tavo and check prompt slots, enabled states, and ordering.
+- For source inspection or customization, browse [Iveya's JSON](presets/伊薇娅·织语_1.0.2.json) or [Eveline's JSON](presets/伊芙琳·织境_1.0.2.json). If a browser displays the JSON instead of downloading it, use GitHub's **Download raw file** control.
 
 ## Compatibility, feedback, and license
 

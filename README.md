@@ -15,6 +15,8 @@ Two distinct preset approaches built around a shared novel-style narrative philo
 
 ---
 
+## 中文
+
 ## 预设一览 · Preset overview
 
 | | **伊薇娅·织语** | **伊芙琳·织境** |

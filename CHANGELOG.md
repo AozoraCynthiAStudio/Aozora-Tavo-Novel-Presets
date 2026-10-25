@@ -2,6 +2,8 @@
 
 ## 1.0.2
 
+- **2026-10-25 · Updated release package:** Clarified Eveline's adult-narrative guidance to distinguish private adult thoughts/actions from interactions between characters, without changing the prompt structure. Iveya is unchanged.
+
 - Clarified Eveline's high-level living-chronicler identity in the existing Eveline core prompt, without adding prompt slots or changing their enabled states.
 
 First public repository baseline.

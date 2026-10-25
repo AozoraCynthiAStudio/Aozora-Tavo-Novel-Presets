@@ -140,9 +140,9 @@ NPC 可以在符合性格和情境时主动回应，场景也可以自然延续�
 
 ### 当前 1.0.2 配置如何体现这套身份？
 
-在当前公开的 1.0.2 JSON 中，Eveline 核心层采用的是“后台叙事操作层”的低显性实现方式，避免她在剧情正文中自我介绍或抢占前台；具体规则分布在人物与关系、连续性与知情边界、世界与场景动能、动态描写、空间与时间连续性等模块中。
+当前公开的 1.0.2 JSON 已将这份人格理念落实为独立的「伊芙琳人格与高位叙事身份」提示词层，并将它放在核心叙事规则之前。配置目前共有 23 个提示词条目：人格层定义她是谁、具有什么气质、承担哪些叙事职责以及权限边界；Eveline 核心层负责把这些原则落实为后台叙事工作；其他规则层分别处理人物关系、成年亲密叙事、连续性与知情边界、世界与场景动能、动态描写、空间与时间连续性等问题。
 
-需要区分的是：**“高位叙事权限的活着的编年者”是伊芙琳的人格原型与设计理念；当前 1.0.2 文件并没有把旧版那段完整人格宣言原样保留为独立的大段提示词。** 当前版本更着重于将这套理念落实为叙事职责和可执行的写作规则，而不是要求模型反复表演或解释这份身份。
+这并不是要求模型在正文中反复扮演或解释自己的高位身份。除非玩家明确与 Eveline 本人互动，她默认在幕后工作；她的身份应通过理解故事、准确把握关系、维持连续性和有分寸地展开场景来体现。这里的“高位叙事权限”是预设中的叙事职责设定，不代表无限全知、可以覆盖玩家决定，或能解除模型和服务平台的限制。
 
 ### 关于成年亲密叙事规则
 
@@ -282,9 +282,9 @@ Eveline is the story's witness and recorder, its unfolder, and a resonant interp
 
 ### How does version 1.0.2 implement this identity?
 
-In the current public 1.0.2 JSON, Eveline's core layer uses a low-profile “backstage narrative operations layer” approach: she should not introduce herself in the story or take over the foreground. The practical rules are distributed across modules for characters and relationships, continuity and knowledge boundaries, world and scene momentum, dynamic prose, and spatial and temporal consistency.
+The public 1.0.2 JSON now includes a dedicated **Eveline Persona and High-Level Narrative Identity** layer, placed before the core narrative rules. The configuration contains 23 prompt entries. The persona layer defines who Eveline is, her temperament, her narrative responsibilities, and the boundaries of her authority; the Eveline core layer translates those principles into backstage narrative work; the remaining layers address relationships, adult intimacy, continuity and knowledge boundaries, world and scene momentum, dynamic prose, and spatial and temporal consistency.
 
-It is important to distinguish the two levels: **“the living chronicler with high-level narrative authority” is Eveline's persona origin and design philosophy; the current 1.0.2 file does not retain the older full persona declaration verbatim as a separate, extensive prompt block.** This release focuses more on translating the philosophy into narrative responsibilities and practical writing rules than on having the model repeatedly perform or explain its identity.
+This does not ask the model to repeatedly perform or explain its high-level identity in the story. Unless the player explicitly interacts with Eveline herself, she works in the background. Her identity should be expressed through understanding the story, reading relationships accurately, maintaining continuity, and unfolding scenes with judgment. “High-level narrative authority” describes her role within the preset; it does not mean unlimited omniscience, permission to override the player, or a way to remove model or provider restrictions.
 
 ### Adult-intimacy guidance
 

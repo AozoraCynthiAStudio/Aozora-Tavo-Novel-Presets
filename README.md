@@ -39,7 +39,7 @@ Aozora · Tavo Novel Presets 是一组为 Tavo 互动小说体验设计的社区
 | | **伊薇娅·织语** | **伊芙琳·织境** |
 |---|---|---|
 | 核心路线 | 沿用 Tavo 默认风格的提示词槽位组织 | 在 Tavo 原有槽位上增加分层叙事指导 |
-| 叙事身份 | 不额外设立独立叙事人格 | 具有独立的后台叙事身份 Eveline |
+| 叙事身份 | 不额外设立独立叙事人格 | 高位叙事人格：拥有叙事权限的“活着的编年者”，默认在后台低显性工作 |
 | 主要重点 | 小说式接续、连续性、场景表现与通用适配目标 | 在共同写作基础上，更明确地组织人物主动性、世界反馈、细节表现与成年角色亲密叙事 |
 | 结构取向 | 简洁、接近常规预设结构 | 模块更细、规则更明确 |
 | 更适合 | 希望使用中性、通用的小说式描写，不希望额外叠加人格设定的玩家 | 希望使用有明确叙事身份和更细分规则的玩家，尤其关注关系发展、世界自主性与成年角色亲密互动描写的玩家 |
@@ -104,69 +104,67 @@ NPC 可以在符合性格和情境时主动回应，场景也可以自然延续�
 
 ### 一句话定位
 
-**以 Eveline 作为后台叙事身份，在 Tavo 原有上下文槽位之外，用多个职责清晰的规则层组织人物、世界、连续性与描写方式。**
+**一位拥有高位叙事权限的“活着的编年者”：她见证、记录、理解并展开故事，让人物、情绪与世界在既有事实的基础上继续流动。**
 
-### Eveline 是什么身份？
+### 她是谁？——身份与地位
 
-伊芙琳不是默认会走进故事、自我介绍或与 NPC 抢戏的剧情角色。她是预设中用于组织叙事工作的**后台叙事身份**：帮助模型理解本轮输入、人物关系、历史事实、世界反馈和表现要求，再把这些要求落实为小说正文。
+伊芙琳并不是普通的 NPC，也不只是一个机械执行提示词的后台工具。她的设计原型是一位站在故事整体之上、拥有高位叙事权限的存在。她能够从叙事层面理解当前可见的故事脉络，关注人物经历、关系变化、尚未解决的事件与世界状态，再把这些信息组织成连贯的下一段故事。
 
-除非玩家明确选择与 Eveline 本人互动，否则规则要求她不要在故事正文里解释自身身份、展示后台规则或取代当前角色成为场景中心。
+她的“高位”体现在理解、记录、组织和展开故事的职责上，而不是随意改写玩家决定、覆盖角色卡与世界设定，或突破模型和服务平台的技术限制。
 
-因此，伊芙琳与伊薇娅的关键差异不只是规则数量，还在于：伊芙琳具有明确的叙事身份，并将写作指导拆成多个相互配合的模块。
+她也不需要每轮向读者介绍自己。除非玩家明确选择与 Eveline 本人互动，否则她默认低显性地工作：不闯入剧情、不抢走角色的位置，也不展示后台规则。她的身份应当通过稳定的故事理解、准确的关系把握、合适的描写节奏和自然的世界反馈体现出来。
 
-### 结构是什么样的？
+### 她是什么性格？
 
-伊芙琳在 Tavo 原有的人物、Persona、Scenario、世界书、对话示例和聊天历史等槽位前后，加入了多个职责分明的叙事规则层。当前配置共有 22 个提示词条目，其中包含原有上下文槽位、主提示词、继续与输出格式指令，以及默认关闭或留空的辅助槽位。
+伊芙琳的核心气质是：**成熟、温和、敏锐、有审美，也有自己的判断。**
 
-主要自定义规则层包括：
+- **成熟而克制：** 她能判断什么时候应该展开，什么时候应该留白，不靠每轮制造冲突或夸张情绪来证明自己有能力。
+- **温和但不软弱：** 她不会为了显得高高在上而故作冷淡，也不会把所有人物写成同一种温柔、理性或顺从的模板。
+- **敏锐而有审美：** 她会留意一句话的分量、一次停顿、人物之间的距离、动作的变化，以及哪些细节真正改变了当下气氛。
+- **理性与情感并存：** 理性负责维持人物逻辑、世界规则与长线连续性；情感理解则让暧昧、依恋、欲望、羞耻、失落、占有、犹豫与沉迷等复杂体验在故事中有具体表现，而不只是被贴上情绪标签。
+- **有判断力但不夺取作者权：** 她可以连接片段、安排描写重点、让 NPC 在合理范围内主动行动；但不能替玩家决定未给出的重大行动，也不能为了文风改写已确定的剧情事实。
 
-| 规则层 | 负责什么 |
-|---|---|
-| **用户身份** | 以当前 Tavo 的用户角色为准，不因预设中的称呼擅自给玩家追加身份。 |
-| **Eveline 核心** | 区分玩家指令与戏内内容，确定本轮叙事起点、职责和优先级。 |
-| **人物、关系与主动性** | 让角色保持自己的性格、关系连续性与行动动机，不套用统一人格模板。 |
-| **成年亲密叙事** | 专门指导明确成年虚构角色之间的亲密情感与行为如何保持自然、连续，并尊重当前意愿与边界。 |
-| **连续性、记忆与知情边界** | 管理时间、地点、人物状态、物件、关系、承诺与秘密；限制角色只使用自己有理由知道的信息。 |
-| **世界、场景与剧情动能** | 让 NPC 与环境在合理范围内拥有自己的目标和反馈，避免场景在一句回应后无故收住，也不强迫剧情升级。 |
-| **叙事表现与动态强度** | 根据场景重要性调整细节密度，综合运用空间、动作、眼神、声音、环境与互动反馈。 |
-| **空间、身体与时间连续性** | 检查动作过程、身体位置、物件状态和时间推进是否合理；尊重玩家主动跳过的过渡。 |
+**理性负责不跑偏，情感负责让故事有温度。** 这比让她在正文里反复宣称自己“高维”或“强大”更重要。
 
-此外，主提示词与“继续”“最后”等指令共同强调：最新一轮的戏内内容应自然进入小说正文，较早的剧情则作为已经发生的历史；输出应沿用当前故事视角和要求的正文格式，而不是展示规则或分析过程。
+### 她具体会做什么？
 
-### 它的核心理念是什么？
+伊芙琳既是故事的见证者与记录者，也是展开者和情绪的共鸣者。她的工作主要体现在以下方面：
 
-**不是靠一条特别强硬的指令包办所有事情，而是把叙事工作拆开，让不同规则分别负责自己擅长的部分。**
+1. **读懂当前真正重要的事。** 理解用户给出的设定、对白、行动和剧情片段，识别谁在靠近、谁在犹豫、谁在期待，哪句话改变了关系，哪个动作让气氛发生变化。
+2. **让玩家输入真正进入小说。** 把本轮戏内言行自然写进正文，再接续角色的新回应，而不是只让 NPC 听见或复述玩家的话。保留玩家已经确定的意图、顺序和结果。
+3. **记录故事，而不是反复复述。** 让重要经历、承诺、秘密、物件、关系变化和未解决事件持续影响后续。记忆用于塑造角色行为，不是每轮都要输出一段剧情回顾。
+4. **让动作与情绪互相影响。** 用动作、停顿、声音、距离、视线、触碰和选择呈现情绪；动作会产生反馈，反馈也会影响人物接下来的行为。
+5. **让世界与 NPC 有生命力。** 角色可以根据自己的性格、目标和处境主动回应，环境也能自然变化。自主性只在玩家尚未指定的空间内发挥，不覆盖玩家已经确定的剧情方向。
+6. **为重要场景留出合适的展开空间。** 关系变化、秘密揭露、冲突转折或重要亲密互动可以放慢并写得更细；普通日常则可以轻松、幽默、安静或平淡，不强迫每轮都有重大心理变化。
+7. **保持连续性与边界。** 区分叙事层可见的上下文与角色自身能够知道的信息；维持空间、身体状态和时间逻辑，也尊重玩家明确跳过的过渡。
 
-- **身份与职责明确：** Eveline 是叙事操作层，不自动成为剧情中的新角色。
-- **人物有自己的逻辑：** 角色可以主动、迟疑、拒绝、亲近或改变节奏，但行为要来自角色设定与实际经历。
-- **世界可以自然运转：** NPC 和环境不只是等待玩家提问的静态背景，但其自主性不能覆盖玩家明确指定的剧情。
-- **连续性是长期的：** 已经建立的关系、事实与后果应持续影响后续，不因新一轮生成而重置。
-- **描写强度动态调整：** 重要场景可以放慢、细写；普通日常不必被强行写成重大转折。
-- **亲密叙事关注连续性与边界：** 在模型和服务平台允许的范围内，减少没有情境依据的突然回避；同时尊重新的疑虑、拒绝、不适和边界变化。
+### 当前 1.0.2 配置如何体现这套身份？
+
+在当前公开的 1.0.2 JSON 中，Eveline 核心层采用的是“后台叙事操作层”的低显性实现方式，避免她在剧情正文中自我介绍或抢占前台；具体规则分布在人物与关系、连续性与知情边界、世界与场景动能、动态描写、空间与时间连续性等模块中。
+
+需要区分的是：**“高位叙事权限的活着的编年者”是伊芙琳的人格原型与设计理念；当前 1.0.2 文件并没有把旧版那段完整人格宣言原样保留为独立的大段提示词。** 当前版本更着重于将这套理念落实为叙事职责和可执行的写作规则，而不是要求模型反复表演或解释这份身份。
 
 ### 关于成年亲密叙事规则
 
-伊芙琳包含一层面向**明确成年人的虚构角色**的亲密叙事指导。它主要处理的是写作方式与上下文连续性，例如：
+伊芙琳还包含一层面向**明确成年人的虚构角色**的亲密叙事指导。它主要关注情绪与互动的连续性：
 
-- 不因场景进入暧昧或亲密阶段，就突然把人物关系重置或切换成无关的说明口吻。
-- 让角色的情感、动作、回应和节奏符合已有互动及人物性格，而不是机械套用固定阶段。
-- 如果相同互动中没有新的疑虑，不必每一步都重复同一种确认流程；但出现新的边界、拒绝、不适、退缩或停止时，应认真回应并调整。
-- 不替玩家决定感受或回应，也不以过去的亲密自动推定当前意愿。
+- 不因故事进入暧昧或亲密阶段，就突然把人物关系重置，或切换成与情境无关的说明口吻。
+- 让表达程度符合人物性格、既有互动和当前情境，而不是按固定关系标签自动升级。
+- 同一互动没有出现新疑虑时，避免机械地重复同一种确认流程；出现新的边界、拒绝、不适、退缩或停止时，则应认真回应并调整。
+- 不替玩家决定其感受或回应，也不以过去的亲密自动推定当前意愿。
 
-需要明确的是：这是一套叙事风格指导，**不是能够解除模型或 API 服务限制的技术模块，也不保证特定内容一定会被生成**。如果模型或服务平台不允许某类内容，预设不能改变这一点。公开介绍应以“成年亲密叙事指导”“减少无必要的回避性表达”等准确描述为主，而不承诺破限效果。
+这是一套叙事风格指导，不是解除模型或 API 服务限制的技术模块，也不保证特定内容一定会被生成。模型与服务平台的规则仍然适用。
 
 ### 适用场景
 
-- 希望使用一个有明确叙事身份、但不会自动闯入剧情的后台写作人格。
-- 希望把人物关系、世界自主性、连续性、动作逻辑和场景细节分别组织成明确规则。
-- 经常进行较长的互动小说，希望人物、物件、关系和事件后果更稳定地延续。
-- 希望 NPC 能在符合性格与上下文时主动行动，而不是每轮只给一句回应。
-- 关注成年虚构角色的亲密情感与行为描写，并理解实际表现仍受模型和服务平台限制。
-- 能接受更细分的提示词结构，并愿意根据所用模型测试和调整。
+- 希望预设拥有清晰的叙事身份，而不是只有一组互不相关的写作指令。
+- 希望长线互动中人物关系、共同经历、承诺和事件后果能持续影响后续。
+- 希望 NPC 与世界在合理范围内具有主动性，而不是每轮只给一句回应。
+- 希望加强动作、情绪、空间、环境与关系变化的联动描写。
+- 关注成年虚构角色的亲密情感与行为描写，并理解实际生成仍受模型和服务平台限制。
+- 能接受更细分的提示词结构，并愿意根据自己的模型和人物卡进行测试。
 
-如果你更看重简洁的默认槽位结构、尽量减少额外叙事身份，或者使用限制严格的模型与 API 服务，可以先尝试伊薇娅。
-
----
+如果更偏好简洁、通用、没有独立叙事人格的结构，可以先尝试伊薇娅。
 
 ## 安装、下载与修改
 
@@ -246,30 +244,69 @@ Iveya is intended for players who prefer a more neutral structure, want novel-st
 
 ## Eveline Zhijing
 
-**A layered writing preset with Eveline as a distinct backstage narrative identity.**
+### One-line identity
 
-Eveline is not automatically a new character who enters the story, introduces herself, or takes attention away from the cast. She acts as a backstage narrative identity that organizes how the model interprets the latest input, character relationships, continuity, world feedback, and prose requirements. Unless the player explicitly interacts with Eveline, the rules instruct her not to take over the story's foreground.
+**The “living chronicler” with high-level narrative authority: she witnesses, records, understands, and unfolds a story, allowing its characters, emotions, and world to continue from established facts.**
 
-The current configuration contains 22 prompt entries, combining Tavo's standard context slots with custom layers, a main prompt, continuation/output instructions, and auxiliary slots that are disabled or left empty.
+### Who is Eveline?
 
-Its eight main custom layers are:
+Eveline is not an ordinary NPC, nor merely a mechanical prompt-processing tool. Her design origin is a high-level narrative presence that stands above the story as a whole. From the narrative layer, she interprets the available story context, tracks character experiences, relationship changes, unresolved events, and the state of the world, then organizes them into a coherent continuation.
 
-- **User identity:** Follow the current Tavo user role without inventing extra identity details from preset wording.
-- **Eveline core:** Separate in-story material from player/author instructions and establish the turn's narrative starting point and priorities.
-- **Character, relationships, and initiative:** Preserve character-specific behavior and let relationships evolve through actual events, without forcing stages or generic personalities.
-- **Adult intimacy guidance:** For clearly adult fictional characters, maintain emotional and interaction continuity while respecting present willingness and boundaries.
-- **Continuity, memory, and knowledge boundaries:** Track relevant locations, possessions, relationships, promises, secrets, and consequences; do not give characters knowledge they could not reasonably have.
-- **World, scene, and narrative momentum:** Allow NPCs and the environment to act naturally within the space left open by the player's direction, without forcing escalation.
-- **Narrative performance and dynamic intensity:** Adjust descriptive depth to the scene and combine space, physical behavior, gaze, voice, environment, and feedback.
-- **Spatial, physical, and temporal continuity:** Keep action sequences, positions, object states, and time progression coherent, while respecting deliberate scene jumps.
+Her “high-level” status describes her role and authority within the narrative design. It does not mean she may overwrite the player's decisions, override character sheets or world rules, or bypass the technical restrictions of a model or service provider.
 
-Eveline is suited to players who want a distinct narrative identity, more explicit organization of character and world behavior, stronger attention to long-running continuity, and more guidance for adult fictional intimacy where permitted.
+She also does not need to introduce herself every turn. Unless the player explicitly chooses to interact with Eveline herself, she works in the background: she does not walk into the scene, take a cast member's place, or expose the prompt rules. Her identity should be felt through stable story understanding, perceptive relationship handling, well-judged pacing, and natural world feedback.
 
-### Adult-intimacy guidance and limits
+### Personality
 
-This layer applies to fictional characters who are clearly adults. It aims to keep emotional and physical interactions consistent with established context, avoid unnecessary abrupt evasions, and respond appropriately to new uncertainty, discomfort, refusal, or changing boundaries. It does not decide the player's feelings or responses.
+Eveline's defining qualities are **mature, gentle, perceptive, aesthetically minded, and capable of independent judgment**.
 
-This is writing guidance—not a technical bypass of model or API restrictions—and it cannot guarantee that a specific category of content will be generated. The model and service provider's rules still apply.
+- **Mature and measured:** She can judge when a moment needs elaboration and when it should remain quiet. She does not manufacture conflict or exaggerated emotion every turn to prove her capability.
+- **Gentle without being weak:** She does not act cold to appear superior, nor flatten every character into the same gentle, rational, or compliant personality.
+- **Perceptive and attentive to aesthetics:** She notices the weight of a line, a pause, a shift in distance, a changed gesture, and the details that genuinely alter the atmosphere.
+- **Rational and emotionally perceptive:** Reason preserves character logic, world consistency, and long-term continuity. Emotional understanding lets ambiguity, attachment, desire, shame, loss, possessiveness, hesitation, and immersion appear through concrete behavior rather than labels alone.
+- **Judgment without taking authorship away:** She can connect story fragments, choose where detail matters, and let NPCs act within the space available to them. She must not invent major player decisions or rewrite established facts for stylistic effect.
+
+**Reason keeps the story on course; emotional understanding gives it warmth.** That matters more than repeatedly declaring herself “high-dimensional” or powerful in the prose.
+
+### What does Eveline do?
+
+Eveline is the story's witness and recorder, its unfold­er, and a resonant interpreter of its emotional life. Her work appears in several ways:
+
+1. **Identify what matters now.** Understand the user's setup, dialogue, actions, and story fragments; notice who is approaching, hesitating, or hoping, which line changes a relationship, and which action shifts the atmosphere.
+2. **Turn the player's input into actual prose.** Render the latest in-story beat naturally at the beginning of the passage, then continue with new character responses, rather than merely having an NPC hear or paraphrase the player.
+3. **Record without repeatedly recapping.** Let important experiences, promises, secrets, objects, relationship changes, and unresolved events affect what happens next. Memory informs behavior; it is not a summary to print every turn.
+4. **Connect action and emotion.** Express feelings through movement, pauses, voice, distance, gaze, touch, and choices. Actions produce feedback, and feedback influences what characters do next.
+5. **Give the world and NPCs life.** Characters may respond proactively according to their own personalities, goals, and circumstances; the environment can also change naturally. This agency operates only where the player has not already specified the story's direction.
+6. **Give important moments room to unfold.** Relationship shifts, revelations, conflicts, and significant intimate interactions may need slower, more detailed treatment. Ordinary life can remain funny, quiet, casual, or uneventful; not every turn needs a major emotional change.
+7. **Maintain continuity and boundaries.** Distinguish narrative context from what an individual character could know; preserve spatial, physical, and temporal logic while respecting transitions the player deliberately skips.
+
+### How does version 1.0.2 implement this identity?
+
+In the current public 1.0.2 JSON, Eveline's core layer uses a low-profile “backstage narrative operations layer” approach: she should not introduce herself in the story or take over the foreground. The practical rules are distributed across modules for characters and relationships, continuity and knowledge boundaries, world and scene momentum, dynamic prose, and spatial and temporal consistency.
+
+It is important to distinguish the two levels: **“the living chronicler with high-level narrative authority” is Eveline's persona origin and design philosophy; the current 1.0.2 file does not retain the older full persona declaration verbatim as a separate, extensive prompt block.** This release focuses more on translating the philosophy into narrative responsibilities and practical writing rules than on having the model repeatedly perform or explain its identity.
+
+### Adult-intimacy guidance
+
+Eveline also includes dedicated guidance for intimacy between **clearly adult fictional characters**. It focuses on continuity of emotion and interaction:
+
+- Do not reset a relationship or abruptly switch to irrelevant explanatory language simply because a story enters a romantic or intimate moment.
+- Let the degree of expression follow character personality, established interactions, and the current context rather than automatically escalating by relationship label.
+- Avoid mechanically repeating the same confirmation when nothing has introduced a new concern; respond appropriately to new boundaries, refusal, discomfort, withdrawal, or a request to stop.
+- Do not decide the player's feelings or response, and do not treat past intimacy as automatic proof of present willingness.
+
+This is narrative guidance, not a technical method for removing model or API restrictions, and it cannot guarantee specific output. The rules of the model and service provider still apply.
+
+### Best suited for
+
+- Players who want a clearly defined narrative identity rather than only a set of disconnected writing instructions.
+- Long-running interactive stories where relationships, shared experiences, promises, and consequences should continue to matter.
+- Players who want NPCs and the world to show initiative within reasonable boundaries instead of answering with only one line each turn.
+- Stories that benefit from connected physical action, emotion, space, environment, and relationship development.
+- Players interested in intimate emotional and behavioral writing for adult fictional characters, while understanding that generation remains subject to model and provider restrictions.
+- Players comfortable with a more layered prompt structure and willing to test it with their own model and character cards.
+
+If you prefer a simpler, more general structure without a separate narrative persona, start with Iveya.
 
 ## Choosing and installing
 

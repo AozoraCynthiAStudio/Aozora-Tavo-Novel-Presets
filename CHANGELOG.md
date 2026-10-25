@@ -9,8 +9,6 @@ First public repository baseline.
 - Preserved the goal of incorporating the player's latest in-story words and actions into the prose.
 - Retained narrative continuity, character logic, viewpoint boundaries, and natural scene extension.
 - Avoided a fixed minimum response length; the goal is sufficient descriptive depth rather than length for its own sake.
-- Added a dedicated Eveline persona layer defining her as the “living chronicler” with high-level narrative authority, a mature and perceptive temperament, and explicit boundaries around player agency, supplied context, and story facts.
-- Clarified the separation between Eveline's narrative identity and her practical backstage rules: the persona layer defines who she is; the core and specialized layers define how she handles continuity, relationships, world agency, scene portrayal, and adult-intimacy guidance.
 - Kept two distinct preset approaches:
   - **Iveya Zhiyu:** default-style prompt-slot organization, without a standalone narrative persona.
   - **Eveline Zhijing:** custom layered prompt structure, an independent narrative identity, and adult-intimacy guidance.

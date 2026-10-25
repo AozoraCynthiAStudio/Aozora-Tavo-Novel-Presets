@@ -27,7 +27,7 @@ jobs:
               "伊芙琳·织境_1.0.2.json": ("presets/伊芙琳·织境_1.0.2.json", "7adb681354750adb35ac8abeb27b07d7e73818fb"),
           }
           def git_blob_sha(data):
-              return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest()
+              return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
           with zipfile.ZipFile("1.0.2-updated.zip", "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
               for name, (source, expected) in files.items():

@@ -176,8 +176,8 @@ NPC 可以在符合性格和情境时主动回应，场景也可以自然延续�
 
 发布版本与源文件分开管理，建议普通玩家优先下载 Release 中标记的正式版本；想研究规则、查看差异或自行修改的玩家，可以直接浏览仓库中的源配置：
 
-- [查看伊薇娅源配置](presets/Iveya-Zhiyu-1.0.2.json)
-- [查看伊芙琳源配置](presets/Eveline-Zhijing-1.0.2.json)
+- [查看伊薇娅源配置](presets/Aozora-Tavo-Iveya-Zhiyu-v1.0.2.json)
+- [查看伊芙琳源配置](presets/Aozora-Tavo-Eveline-Zhijing-v1.0.2.json)
 
 ### 安装建议
 
@@ -314,7 +314,7 @@ If you prefer a simpler, more general structure without a separate narrative per
 - **Choose Eveline** if you prefer a layered structure with a distinct backstage narrative identity and more explicit guidance for continuity, world agency, scene texture, and adult intimacy.
 - Back up your current Tavo preset before importing.
 - Download the published version from the [GitHub Releases page](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases), then import the JSON file into Tavo and check prompt slots, enabled states, and ordering.
-- For source inspection or customization, browse [Iveya's JSON](presets/Iveya-Zhiyu-1.0.2.json) or [Eveline's JSON](presets/Eveline-Zhijing-1.0.2.json).
+- For source inspection or customization, browse [Iveya's JSON](presets/Aozora-Tavo-Iveya-Zhiyu-v1.0.2.json) or [Eveline's JSON](presets/Aozora-Tavo-Eveline-Zhijing-v1.0.2.json).
 
 ## Compatibility, feedback, and license
 

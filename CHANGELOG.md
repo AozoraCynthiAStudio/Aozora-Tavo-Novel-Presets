@@ -2,6 +2,8 @@
 
 ## 1.0.2
 
+- Clarified Eveline's high-level living-chronicler identity in the existing Eveline core prompt, without adding prompt slots or changing their enabled states.
+
 First public repository baseline.
 
 - Refined scene writing to better integrate spatial composition, physical behavior, gaze, expression, voice, pauses, and relevant environmental details.

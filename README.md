@@ -8,7 +8,7 @@
 
 Two narrative presets for interactive fiction and roleplay in Tavo. They share a novel-style writing foundation, with different approaches to prompt structure and narrative identity.
 
-[![Version](https://img.shields.io/badge/version-1.0.3-5277C3?style=flat-square)](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases)
+[![Version](https://img.shields.io/badge/version-1.0.3-5277C3?style=flat-square)](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases/tag/v1.0.3)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square)](LICENSE)
 
 ### 下载正式版 · Download

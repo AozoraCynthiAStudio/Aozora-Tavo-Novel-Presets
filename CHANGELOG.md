@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3
+
+- **尝试修复部分相对时间表达的理解：** 明确“今天、明天、后天”等词语应以故事当前日期为参照，并让已建立的约定和计划保留固定目标时间，避免剧情推进后仍反复把同一事件称为“明天”。
+- 强调虚构故事时间应依据场景标记、用户指定的时间跳跃和已发生的剧情变化，不应直接套用现实日期，也不应仅因多生成一轮就默认过了一天。
+- This is a prompt-level attempt; results may vary across models and context.
+
 ## 1.0.2
 
 - **2026-10-25 · Updated release package:** Clarified Eveline's adult-narrative guidance to distinguish private adult thoughts/actions from interactions between characters, without changing the prompt structure. Iveya is unchanged.

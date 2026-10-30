@@ -11,23 +11,27 @@ permissions:
 
 jobs:
   release:
-    if: github.event.head_commit.message == 'Prepare v1.0.4 release'
+    if: contains(github.event.head_commit.message, 'Retry v1.0.4 release')
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Prepare release notes
+        run: |
+          cat > release-notes.md <<'EOF'
+          本次更新重点改善人物卡、世界书与作者指定文风的执行一致性，并修正空间关系推断和互动关系判断。
+
+          - 改善房号与楼层、同层、相邻及垂直对应关系的判断；信息不足时避免武断推断。
+          - 区分玩家发起的身体接触、NPC 的实际反应与关系变化，避免把动作发生直接视为接受或关系升级。
+          - 强化人物卡、世界书、对话示例及作者指定文风的优先级，更忠实地呈现攻略阶段、触发条件和角色转变。
+          - 减少人物情绪、动作和表达方式的同质化，并保持亲密场景中的角色个性与叙述风格。
+
+          本次属于提示词层面的优化，实际效果可能因模型、API 服务、人物卡、世界书及上下文而异。
+          EOF
+
       - name: Create GitHub Release and upload preset package
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create v1.0.4 1.0.4.zip \
-            --title "v1.0.4" \
-            --notes "本次更新重点改善人物卡、世界书与作者指定文风的执行一致性，并修正空间关系推断和互动关系判断。
-
-- 改善房号与楼层、同层、相邻及垂直对应关系的判断；信息不足时避免武断推断。
-- 区分玩家发起的身体接触、NPC 的实际反应与关系变化，避免把动作发生直接视为接受或关系升级。
-- 强化人物卡、世界书、对话示例及作者指定文风的优先级，更忠实地呈现攻略阶段、触发条件和角色转变。
-- 减少人物情绪、动作和表达方式的同质化，并保持亲密场景中的角色个性与叙述风格。
-
-本次属于提示词层面的优化，实际效果可能因模型、API 服务、人物卡、世界书及上下文而异。"
+          gh release create v1.0.4 1.0.4.zip --title "v1.0.4" --notes-file release-notes.md

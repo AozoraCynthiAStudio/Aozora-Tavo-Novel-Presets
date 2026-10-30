@@ -8,12 +8,12 @@
 
 Two narrative presets for interactive fiction and roleplay in Tavo. They share a novel-style writing foundation, with different approaches to prompt structure and narrative identity.
 
-[![Version](https://img.shields.io/badge/version-1.0.3-5277C3?style=flat-square)](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases/tag/v1.0.3)
+[![Version](https://img.shields.io/badge/version-1.0.4-5277C3?style=flat-square)](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases/tag/v1.0.4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square)](LICENSE)
 
 ### 下载正式版 · Download
 
-**[直接下载 1.0.3.zip（内含两份中文预设）](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases/download/v1.0.3/1.0.3.zip)**
+**[直接下载 1.0.4.zip（内含两份中文预设）](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases/download/v1.0.4/1.0.4.zip)**
 
 </div>
 
@@ -130,10 +130,10 @@ Aozora · Tavo Novel Presets 是一组为 Tavo 互动小说体验设计的社区
 
 ## 下载、安装与修改
 
-普通玩家请前往 [GitHub Releases](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases)，下载正式附件 **1.0.3.zip**。解压后会看到两份中文预设：
+普通玩家请前往 [GitHub Releases](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases)，下载正式附件 **1.0.4.zip**。解压后会看到两份中文预设：
 
-- 伊薇娅·织语_1.0.3.json
-- 伊芙琳·织境_1.0.3.json
+- 伊薇娅·织语_1.0.4.json
+- 伊芙琳·织境_1.0.4.json
 
 建议先备份现有预设，再在 Tavo 中导入需要的 JSON，并用自己常用的模型、人物卡和世界书测试。仓库中的 JSON 文件也可供查看源码和自行修改。
 
@@ -153,7 +153,7 @@ Aozora · Tavo Novel Presets 是一组为 Tavo 互动小说体验设计的社区
 
 ## 版本与许可证
 
-当前预设版本：**1.0.3**。
+当前预设版本：**1.0.4**。
 
 本项目使用 **MIT License**，详情见 [LICENSE](LICENSE)。你可以按许可证条款使用、修改和再发布；分享修改版时，请保留适用的版权和许可证声明。
 
@@ -173,4 +173,4 @@ Aozora · Tavo Novel Presets offers two related presets for novel-style roleplay
 
 The presets share the same core writing goals and may produce very similar results. Neither is universally better, and neither guarantees compatibility with every model or provider.
 
-Download **[1.0.3.zip](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases/download/v1.0.3/1.0.3.zip)** from GitHub Releases. It contains both Chinese-named JSON presets. The project is MIT-licensed and community-maintained, not an official Tavo project.
+Download **[1.0.4.zip](https://github.com/AozoraCynthiAStudio/Aozora-Tavo-Novel-Presets/releases/download/v1.0.3/1.0.3.zip)** from GitHub Releases. It contains both Chinese-named JSON presets. The project is MIT-licensed and community-maintained, not an official Tavo project.
